@@ -1,11 +1,11 @@
 package Week4;
 
-import java.sql.Array;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Week4_Main {
+
     public static void main(String[] args) {
 
         Library library = new Library();
@@ -14,9 +14,9 @@ public class Week4_Main {
         library.addBookList("객체지향의 사실과 오해");
         library.addBookList("테스트 주도 개발(TDD)");
 
+        Map<Book, Boolean> bookLists = new HashMap<>();
 
-
-        while(true) {
+        while (true) {
 
             System.out.println("대여할 책의 번호를 입력하세요 ");
 
