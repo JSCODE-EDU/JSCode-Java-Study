@@ -33,6 +33,18 @@ public class MemberRepository {
 
     }
 
+    public boolean findByName(String name) {
+        for (Member member : memberList) {
+            if (member.getName().equals(name)) {
+                System.out.println(name + "의 이메일은 " + member.getEmailAddress() + "이고 "
+                    + "나이는 " + member.getAge() + "입니다");
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     private boolean sameEmailValidation(String email) {
         if (findByEmail(email) != null) {
             return false;

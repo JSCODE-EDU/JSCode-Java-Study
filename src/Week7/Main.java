@@ -19,11 +19,13 @@ public class Main {
 
             System.out.println("원하시는 번호를 입력해주세요");
             System.out.println("1. 회원 등록");
+            System.out.println("2. 회원 조회");
 
             menuSelection = sc.nextInt();
+            sc.nextLine();
 
             if (menuSelection == 1) {
-                sc.nextLine();
+
                 System.out.println("이메일을 입력해주세요");
                 email = sc.nextLine();
 
@@ -39,6 +41,13 @@ public class Main {
                 } else {
                     System.out.println("이미 등록된 이메일이어서 회원 등록에 실패했습니다");
                 }
+            }
+
+            if (menuSelection == 2) {
+                System.out.println("조회하려는 회원의 이름을 입력해주세요");
+                name = sc.nextLine();
+
+                memberRepository.findByName(name);
             }
 
 
